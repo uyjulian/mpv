@@ -97,7 +97,7 @@ class CocoaCB: NSObject {
     func initBackend(_ vo: UnsafeMutablePointer<vo>) {
         let opts: mp_vo_opts = vo.pointee.opts.pointee
         NSApp.setActivationPolicy(.regular)
-        setAppIcon()
+        // setAppIcon()
 
         let targetScreen = getScreenBy(id: Int(opts.screen_id)) ?? NSScreen.main()
         let wr = getWindowGeometry(forScreen: targetScreen!, videoOut: vo)
